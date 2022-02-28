@@ -17,7 +17,7 @@
 }
 
 body {
-  background: var(--dark-grayish-cyan);
+  background: var(--light-grayish-cyan);
   display: grid;
   place-content: center;
   width: 100%;
