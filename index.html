@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css" >
+  <title>Tip calculator app</title>
+</head>
+<body>
+  <h1 class="title">SPLI<br />TTER</h1>
+  <div class="container" role="main">
+    <section class="calculate">
+      <div class="bill">
+        <label for="bill">Bill</label>
+        <div class="input-item bill-input__item">
+          <input type="text" name="bill" id="bill" value="142.55"/>
+        </div>
+      </div>
+      <div class="tip">
+        <label for="tip">Select Tip %</label>
+        <div class="buttons">
+          <button>5%</button>
+          <button>10%</button>
+          <button>15%</button>
+          <button>25%</button>
+          <button>50%</button>
+          <button>Custom</button>
+        </div>
+      </div>
+      <div class="number-people">
+        <label for="txtNumberPeople">Number of People</label>
+        <div class="input-item number-people-input__item">
+          <input type="text" name="txtNumberPeople" id="txtNumberPeople" value="5"/>
+        </div>
+      </div>
+    </section>
+    <section class="results">
+      <div class="tip-amount">
+        <div>
+          <span class="name-header">Tip Amount</span><br />
+          <span class="name-subheader">/ person</span>
+        </div>
+        <span class="quantity-result">$4.27</span>
+      </div>
+      <div class="total">
+        <div>
+          <span class="name-header">Total</span><br />
+          <span class="name-subheader">/ person</span>
+        </div>
+        <span class="quantity-result">$32.79</span>
+      </div>
+      <button>Reset</button>
+    </section>
+  </div>
+</body>
+</html>

@@ -1,0 +1,224 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Space Mono', monospace;
+}
+
+:root {
+  --strong-cyan: hsl(172, 67%, 45%);
+  --very-dark-cyan: hsl(183, 100%, 15%);
+  --dark-grayish-cyan-one: hsl(186, 14%, 43%);
+  --dark-grayish-cyan: hsl(184, 14%, 56%);
+  --light-grayish-cyan: hsl(185, 41%, 84%);
+  --light-grayish-cyan: hsl(189, 41%, 97%);
+  --white: hsl(0, 0%, 100%) ;
+  --font-size-inputs: 24px;
+}
+
+body {
+  background: var(--dark-grayish-cyan);
+  display: grid;
+  place-content: center;
+  width: 100%;
+  height: 100vh;
+}
+
+.title {
+  text-align: center;
+  margin-bottom: 45px;
+  color: var(--very-dark-cyan);
+  font-weight: 700;
+  letter-spacing: 8px;
+  font-size: 1.4rem;
+}
+
+.container {
+  background: var(--white);
+  border-radius: 15px;
+  display: grid;
+  grid-template-columns: repeat(2,1fr);
+  place-content: center;
+  gap: 33px;
+  padding: 25px;
+  width: 850px;
+  height: 420px;
+}
+
+/*Calculate panel*/
+.calculate {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(3,115px);
+}
+
+.calculate label{
+  display: block;
+  color: var(--dark-grayish-cyan);
+  font-weight: 700;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+}
+
+.calculate input {
+  border: none;
+  border-radius: 7px;
+  background: var(--light-grayish-cyan);
+  width: 100%;
+  height: 45px;
+  font-size: var(--font-size-inputs);
+  outline: none;
+  color: var(--very-dark-cyan);
+  font-weight: 700;
+  text-align: end;
+  padding: 0 20px;
+  font-family: 'Space Mono', monospace;
+}
+
+.input-item {
+  position: relative;
+}
+
+.bill-input__item::before {
+  content: url('./images/icon-dollar.svg');
+  position: absolute;
+  top: 10px;
+  left: 18px;
+} 
+
+.number-people-input__item::before {
+  content: url('./images/icon-person.svg');
+  position: absolute;
+  top: 10px;
+  left: 18px;
+} 
+
+.buttons {
+  display: grid;
+  grid-template-columns: repeat(3,103px);
+  grid-auto-rows: 39px;
+  gap: 10px;
+}
+
+.buttons button {
+  font-family: 'Space Mono', monospace;
+  font-size: 1.3rem;
+  font-weight: 700;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.buttons 
+button:nth-child(1),
+button:nth-child(2),
+button:nth-child(4),
+button:nth-child(5) {
+  background: var(--very-dark-cyan);
+  color: var(--white);
+}
+
+.buttons 
+button:nth-child(3) {
+  background: var(--strong-cyan);
+  color: var(--very-dark-cyan);
+}
+
+.buttons 
+button:last-child {
+  color: var(--dark-grayish-cyan-one);
+}
+
+.number-people {
+  place-self: end;
+  width: 100%;
+}
+/*Results panel*/
+
+.results {
+  background: var(--very-dark-cyan);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(2,85px);
+  padding: 43px 35px 32px 35px;
+  border-radius: 10px;
+}
+
+.results > div {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+
+.results button {
+  background: var(--strong-cyan);
+  border: none;
+  text-transform: uppercase;
+  color: var(--very-dark-cyan);
+  font-weight: 700;
+  font-size: 1rem;
+  border-radius: 5px;
+  width: 100%;
+  align-self: end;
+  height: 40px;
+  cursor: pointer;
+}
+
+.quantity-result {
+  font-size: 2.2rem;
+  color: var(--strong-cyan);
+  font-weight: 700;
+}
+
+.name-header {
+  color: var(--white);
+  font-size: 0.9rem;
+}
+
+.name-subheader {
+  color: var(--dark-grayish-cyan);
+  font-size: 0.7rem;
+}
+
+@media (max-width: 1200px) {
+  body {
+    height: 100%;
+  }
+
+  .title {
+    margin-top: 35px;
+    margin-bottom: 45px;
+    color: var(--very-dark-cyan);
+    font-weight: 700;
+    letter-spacing: 8px;
+    font-size: 1.6rem;
+  }
+
+  .container {
+    border-radius: unset;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+    grid-template-columns: repeat(1,1fr);
+    grid-template-rows: repeat(2, 1fr);
+    row-gap: 33px;
+    width: 385px;
+    height: 100%;
+  }
+
+  .buttons {
+    grid-template-columns: repeat(2,1fr);
+    grid-auto-rows: 1fr;
+    gap: 10px;
+  }
+
+  .results {
+    grid-template-rows: repeat(2,75px);
+    height: 255px;
+    padding: 43px 30px 0 30px;
+  }
+  
+  .results button {
+    align-self: unset;
+  }
+}
